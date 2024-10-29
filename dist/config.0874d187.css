@@ -13,6 +13,7 @@ html, body {
 }
 
 body {
+  background-color: cadetblue;
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -49,6 +50,7 @@ html, body {
 }
 
 body {
+  background-color: cadetblue;
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -180,6 +182,15 @@ img, video, canvas, svg {
   100% {
     width: 230px;
   }
+}
+.loading__object {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
 /*# sourceMappingURL=/config.0874d187.css.map */

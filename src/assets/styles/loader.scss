@@ -81,7 +81,6 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-
 }
    }
 &__counter{
@@ -104,16 +103,24 @@
     animation: width_animation 1s forwards;
     @keyframes width_animation {
       0%{
-
         width: 85%;
       }
       100%{
-
         width: 230px;
       }
     }
-  }
+  }&__object{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+     display: none;
+   }
 }
+
+
 
 
 
