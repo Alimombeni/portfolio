@@ -33,6 +33,16 @@ p,h1,h2,h3,h4,h5,h6{
 img,video,canvas,svg{
   max-width: 100%;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul{
+list-style: none;
+}
+
+
+
 
 
 /*  COLOR--VARIABLES */
@@ -40,3 +50,4 @@ $green-color : #6cff8d;
 $dark-green-color : #6cff8c7a;
 $dark-blue: #0b134f;
 $white-color: #ffffff;
+$bg-landing : #111;
