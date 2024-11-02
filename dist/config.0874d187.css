@@ -287,6 +287,27 @@ ul {
   font-size: 18px;
   font-weight: 200;
 }
+@media (max-width: 1200px) {
+  .landing .header__wrap {
+    width: 100vw;
+  }
+}
+@media (max-width: 650px) {
+  .landing .header__sm {
+    display: none;
+  }
+}
+@media (max-width: 370px) {
+  .landing .header {
+    left: 36%;
+  }
+  .landing .header__wrap {
+    gap: 20%;
+  }
+  .landing .header .coolLink[data-text=Home] {
+    display: none;
+  }
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /* STYLES */
 * {
@@ -371,6 +392,54 @@ ul {
 }
 .coolLink:hover span {
   transform: translate3d(-150%, 0, 0);
+}
+
+.collButton {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  width: 175px;
+  height: 120px;
+  background: none;
+  color: #ffffff;
+}
+.collButton:before, .collButton:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.collButton:before {
+  content: "";
+  background: #ffffff;
+  clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+  transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+}
+.collButton:hover:before {
+  clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+}
+.collButton span {
+  mix-blend-mode: difference;
+  font-weight: 400;
+}
+.collButton:after {
+  content: "";
+  height: 85%;
+  width: 95%;
+  border: 1px solid #fff;
+  border-radius: 58% 42% 55% 45%/56% 45% 55% 44%;
+  transform: rotate(-10deg);
+  transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+}
+.collButton:hover:after {
+  transform: translate3d(0, -5px, 0);
+}
+@media (max-width: 800px) {
+  .collButton {
+    transform: scale3d(0.7, 0.7, 0.7);
+    font-size: 23px;
+  }
 }
 
 /*# sourceMappingURL=/config.0874d187.css.map */
