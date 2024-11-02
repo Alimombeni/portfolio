@@ -180,7 +180,7 @@ module.hot.accept(reloadCSS);
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/alimo/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/coollink.scss":[function(require,module,exports) {
+},{"./..\\shapes\\tumblr.jpg":[["tumblr.a30c38b2.jpg","assets/shapes/tumblr.jpg"],"assets/shapes/tumblr.jpg"],"_css_loader":"C:/Users/alimo/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/styles/coollink.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -216,7 +216,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2573" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "6578" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

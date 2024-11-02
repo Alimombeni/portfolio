@@ -11,9 +11,10 @@
   z-index: 99;
   background-color: $dark-blue;
   display: grid;
+  display: none;
   place-items: center;
   font-family: "Poppins", sans-serif;
-  display: none;
+
 &__box{
   position: relative;
   width: 500px;

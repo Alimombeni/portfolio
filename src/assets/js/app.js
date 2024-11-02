@@ -43,6 +43,7 @@ let barInterval = setInterval(() => {
         gsap.to('.loading' , {
             duration:2,
             delay : 2,
+            zIndex:1,
             background:'transparent',
             opacity:0.5,
 
