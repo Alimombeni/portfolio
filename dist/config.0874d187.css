@@ -130,7 +130,6 @@ ul {
   z-index: 99;
   background-color: #0b134f;
   display: grid;
-  display: none;
   place-items: center;
   font-family: "Poppins", sans-serif;
 }
