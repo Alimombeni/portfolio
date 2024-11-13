@@ -46,6 +46,18 @@ ul {
 }
 
 /*  COLOR--VARIABLES */
+/*  Predefined classes */
+.section {
+  padding: 1rem;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+@media (min-width: 650px) {
+  .section {
+    padding: 5rem;
+  }
+}
 @import url("https://fonts.cdnfonts.com/css/made-theartist-script");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Doto:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
@@ -94,6 +106,19 @@ ul {
 }
 
 /*  COLOR--VARIABLES */
+/*  Predefined classes */
+.section {
+  padding: 1rem;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+@media (min-width: 650px) {
+  .section {
+    padding: 5rem;
+  }
+}
+
 .loading {
   position: fixed;
   top: 0;
@@ -105,6 +130,7 @@ ul {
   z-index: 99;
   background-color: #0b134f;
   display: grid;
+  display: none;
   place-items: center;
   font-family: "Poppins", sans-serif;
 }
@@ -262,6 +288,19 @@ ul {
 }
 
 /*  COLOR--VARIABLES */
+/*  Predefined classes */
+.section {
+  padding: 1rem;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+@media (min-width: 650px) {
+  .section {
+    padding: 5rem;
+  }
+}
+
 .landing {
   position: relative;
   width: 100%;
@@ -478,6 +517,19 @@ ul {
 }
 
 /*  COLOR--VARIABLES */
+/*  Predefined classes */
+.section {
+  padding: 1rem;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+@media (min-width: 650px) {
+  .section {
+    padding: 5rem;
+  }
+}
+
 .coolLink {
   position: relative;
   display: grid;
@@ -576,23 +628,23 @@ ul {
 @keyframes colorIconAnimation {
   0% {
     opacity: 0.4;
-    text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+    text-shadow: 5px 4px #ff0000, -5px -6px #2196f3;
   }
   25% {
     opacity: 0.8;
-    text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+    text-shadow: -5px -6px #ff0000, 5px 4px #2196f3;
   }
   50% {
     opacity: 0.4;
-    text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+    text-shadow: 5px -4px #ff0000, -8px 4px #2196f3;
   }
   75% {
     opacity: 0.8;
-    text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+    text-shadow: -8px -4px #ff0000, -5px -4px #2196f3;
   }
   100% {
     opacity: 0.4;
-    text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+    text-shadow: -5px 0 #ff0000, 5px -4px #2196f3;
   }
 }
 @import url("https://fonts.cdnfonts.com/css/made-theartist-script");
@@ -643,6 +695,19 @@ ul {
 }
 
 /*  COLOR--VARIABLES */
+/*  Predefined classes */
+.section {
+  padding: 1rem;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+@media (min-width: 650px) {
+  .section {
+    padding: 5rem;
+  }
+}
+
 .skills {
   position: relative;
   font-size: 40px;
@@ -700,6 +765,120 @@ ul {
   .skills__text--right {
     top: 8rem;
   }
+}
+@import url("https://fonts.cdnfonts.com/css/made-theartist-script");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Doto:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* STYLES */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+*:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: cadetblue;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/*  COLOR--VARIABLES */
+/*  Predefined classes */
+.section {
+  padding: 1rem;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+@media (min-width: 650px) {
+  .section {
+    padding: 5rem;
+  }
+}
+
+.reviews {
+  background: #060b11;
+  color: white;
+  position: relative;
+}
+.reviews__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.reviews__header .instructor {
+  position: relative;
+  background: rgba(40, 49, 96, 0.0745098039);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
+}
+.reviews__header .instructor__curve {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 30%;
+  height: 120%;
+  border-left: 2px solid #2196f3;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.67);
+}
+.reviews__header .instructor__infos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+.reviews__header .instructor__img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.reviews__header .instructor__col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.reviews__header .instructor__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reviews__header .instructor__info img {
+  width: 20px;
+  height: 20px;
 }
 
 /*# sourceMappingURL=/config.0874d187.css.map */
