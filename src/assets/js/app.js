@@ -1,4 +1,6 @@
 import {gsap} from "gsap";
+import Swiper from "swiper";
+import { reviews } from './data';
 const barEl = document.querySelector('.loading__bar--inner');
 const numberEl = document.querySelector('.loading__counter--number');
 const objectEl = document.querySelector('.loading__object');
@@ -51,5 +53,79 @@ let barInterval = setInterval(() => {
 
     }
 }, 20);
+
+
+/*swiper*/
+
+reviews.forEach((e)=>{
+
+})
+//reviews swiper
+
+var swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints:{
+        400: {
+            slidesPerView: 1,
+        },
+        850: {
+            slidesPerView: 2,
+        },
+        1400:{
+            slidesPerView : 3,
+        },
+        1900:{
+            slidesPerView:4,
+        }
+    }
+});
+
+const swiper_container = document.querySelector('.swiper-wrapper');
+reviews.map((review)=>{
+let template = `<div class="swiper-slide">
+            <div class="review">
+                <i class="uil uil-comment review__icon"></i>
+                <div class="review__card">
+                <div class="review__topborder"></div>
+                <div class="review__text">
+                    <span>${review.review.substring(0,1)}</span>
+                    ${review.review.substring(1 , review.review.length)}
+                 </div>
+                <img src=${review.imgs} alt="" class="review__img">
+            <div class="review__profile">
+                 <span>${review.name}</span>
+                 <span>${review.position}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+                `
+
+    swiper_container.innerHTML += template;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
