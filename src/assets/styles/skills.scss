@@ -2,7 +2,7 @@
 .skills{
   position: relative;
   font-size: 40px;
-  height: 300px;
+  height: 100px;
   background: $yellow-color;
   overflow: hidden;
   text-align: center;
@@ -18,8 +18,8 @@
     font-family: Agdasima ;
   &--left{
     left: 0;
-    top: 6rem;
-    animation: moveLeft 10s linear infinite;
+    top: 1rem;
+    animation: moveLeft 30s linear infinite;
     @keyframes moveLeft {
 
     0%{
@@ -31,32 +31,38 @@
 
     }
 
-  }
-    &--right{
-      right: 0;
-      top: 11rem;
-      animation: moveRight 20s linear infinite;
-      @keyframes moveRight {
-        0%{
-          transform: translate3d(0,0,0);
-        }
-        100%{
-          transform: translate3d(50%,0,0);
-        }
-      }
-    }
-  }
-@media (max-width: 700px) {
-  &{
-    height: 200px;
-  }&__text{
-  font-size: 20px;
-  &--left{
-    top: 5rem;
-  }&--right{
-    top: 8rem;
-     }
-     }
-}
 
-}
+  }
+
+    //&--right{
+    //  right: 0;
+    //  top: 7rem;
+    //  animation: moveRight 20s linear infinite;
+    //  @keyframes moveRight {
+    //    0%{
+    //      transform: translate3d(0,0,0);
+    //    }
+    //    100%{
+    //      transform: translate3d(50%,0,0);
+    //    }
+    //  }
+    //}
+
+
+
+    }
+  @media (max-width: 700px) {
+    &{
+      height: 50px;
+    }&__text{
+       font-size: 26px;
+       &--left{
+         top: 0.5rem;
+       }
+       //&--right{
+       //   top: 8rem;
+       // }
+     }
+  }
+  }
+

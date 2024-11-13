@@ -711,7 +711,7 @@ ul {
 .skills {
   position: relative;
   font-size: 40px;
-  height: 300px;
+  height: 100px;
   background: #ffea5c;
   overflow: hidden;
   text-align: center;
@@ -728,8 +728,8 @@ ul {
 }
 .skills__text--left {
   left: 0;
-  top: 6rem;
-  animation: moveLeft 10s linear infinite;
+  top: 1rem;
+  animation: moveLeft 30s linear infinite;
 }
 @keyframes moveLeft {
   0% {
@@ -739,31 +739,15 @@ ul {
     transform: translate3d(-50%, 0, 0);
   }
 }
-.skills__text--right {
-  right: 0;
-  top: 11rem;
-  animation: moveRight 20s linear infinite;
-}
-@keyframes moveRight {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(50%, 0, 0);
-  }
-}
 @media (max-width: 700px) {
   .skills {
-    height: 200px;
+    height: 50px;
   }
   .skills__text {
-    font-size: 20px;
+    font-size: 26px;
   }
   .skills__text--left {
-    top: 5rem;
-  }
-  .skills__text--right {
-    top: 8rem;
+    top: 0.5rem;
   }
 }
 @import url("https://fonts.cdnfonts.com/css/made-theartist-script");
