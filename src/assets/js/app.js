@@ -1,10 +1,11 @@
-import {gsap} from "gsap";
-import Swiper from "swiper";
+import { gsap } from "gsap";
 import { reviews } from './data';
+import Splide from "@splidejs/splide";
+
+// ---------------------------------------------
 const barEl = document.querySelector('.loading__bar--inner');
 const numberEl = document.querySelector('.loading__counter--number');
 const objectEl = document.querySelector('.loading__object');
-
 let c = 0;
 let barInterval = setInterval(() => {
     numberEl.innerText = c + '%';
@@ -55,39 +56,10 @@ let barInterval = setInterval(() => {
 }, 20);
 
 
-/*swiper*/
-
-reviews.forEach((e)=>{
-
-})
-//reviews swiper
-
-var swiper = new Swiper(".swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints:{
-        400: {
-            slidesPerView: 1,
-        },
-        850: {
-            slidesPerView: 2,
-        },
-        1400:{
-            slidesPerView : 3,
-        },
-        1900:{
-            slidesPerView:4,
-        }
-    }
-});
-
-const swiper_container = document.querySelector('.swiper-wrapper');
+// reviews cards
+const splide_container = document.querySelector('.splide__list');
 reviews.map((review)=>{
-let template = `<div class="swiper-slide">
+    let template = `<div class="splide__slide">
             <div class="review">
                 <i class="uil uil-comment review__icon"></i>
                 <div class="review__card">
@@ -105,27 +77,17 @@ let template = `<div class="swiper-slide">
             </div>
         </div>
                 `
-
-    swiper_container.innerHTML += template;
+    splide_container.innerHTML += template;
 });
 
 
+var splide = new Splide( '.splide', {
+    type   : 'loop',
+    perPage: 3,
+    perMove: 3,
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+splide.mount();
 
 
 

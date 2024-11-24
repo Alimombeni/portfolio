@@ -59,23 +59,28 @@ position: relative;
     }
   }
 }
-.swiper__wrapper{
+.splide{
   padding: 2rem 0;
+  user-select: none;
+}
 
-}
-.swiper{
- user-select: none;
-}
 .review{
   position: relative;
   display: flex;
   font-size: 16px;
-  padding: 5px;
+  padding: 20px 0;
   &__card{
     position: relative;
     width: 100%;
     padding: 2rem 0;
     display: flex;
+    @media (min-width:650px ) {
+      &{
+        font-size: 18px;
+        font-family: Roboto , sans-serif;
+
+      }
+    }
   }
   &__icon{
   font-size: 30px;
@@ -95,7 +100,7 @@ position: relative;
       font-family: "Agdasima", sans-serif;
       font-size: 30px;
       font-weight: 600;
-      color: $red-color;
+      color: #bdbdbd;
     }
 
 
@@ -109,20 +114,16 @@ position: relative;
   &__profile {
    position: absolute;
     left: 5rem;
+    color: #bdbdbd;
     bottom: -1.5rem;
     display: flex;
     flex-direction: column;
     font-family: Roboto , sans-serif;
+    font-weight: 300;
+    font-size: 16px;
   }
 
 }
-
-
-
-
-
-
-
 
 
 

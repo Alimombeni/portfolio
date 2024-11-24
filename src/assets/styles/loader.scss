@@ -11,7 +11,7 @@
   z-index: 99;
   background-color: $dark-blue;
   display: grid;
-  //display: none;
+  display: none;
   place-items: center;
   font-family: "Poppins", sans-serif;
 
@@ -27,8 +27,10 @@
       width: 90vw;
     }
   }
+//==================================================================================================
 
-  
+//==================================================================================================
+
 }&__bar{
   width: 90%;
   height: 10px;
