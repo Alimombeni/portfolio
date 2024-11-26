@@ -891,6 +891,119 @@ ul {
   stroke-dashoffset: 0;
   transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
 }
+
+@media (max-width: 1350px) {
+  .projects {
+    padding: 3rem;
+  }
+  .project__img img {
+    width: 74vw;
+    right: 5rem;
+  }
+  .project__infos--name {
+    font-size: 38px;
+  }
+  .project .coolCircleEyeButton {
+    transform: translate(-14rem, -3rem);
+  }
+}
+@media (max-width: 740px) {
+  .projects {
+    padding: 1rem;
+  }
+  .project__tags {
+    flex-direction: row;
+    top: 0;
+    left: 0;
+  }
+  .project__infos--name {
+    font-size: 35px;
+  }
+  .project__infos--name span {
+    display: none;
+  }
+  .project__img img {
+    width: 85vw;
+    right: 3rem;
+  }
+}
+@media (max-width: 440px) {
+  .project .coolCircleEyeButton {
+    transform: translate(0);
+  }
+  .project__tags {
+    gap: 6px;
+    font-size: 14px;
+  }
+  .project__header span {
+    font-size: 25px;
+  }
+}
+.coolCircleEyeButton {
+  position: relative;
+  display: inline-block;
+  top: 1rem;
+}
+.coolCircleEyeButton .textcircle {
+  display: block;
+  width: 250px;
+  animation: rottate 8s linear infinite;
+}
+.coolCircleEyeButton .textcircle text {
+  font-size: 32px;
+  text-transform: uppercase;
+  fill: white;
+}
+@keyframes rottate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.coolCircleEyeButton:hover text {
+  font-weight: 500;
+}
+.coolCircleEyeButton:hover .eye__inner,
+.coolCircleEyeButton:hover .eye__lashes-up,
+.coolCircleEyeButton:hover .eye__iris {
+  animation: hide 2s step-end infinite;
+}
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+}
+.coolCircleEyeButton:hover .eye__lashes-down {
+  animation: show 2s step-end infinite;
+}
+@keyframes show {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+}
+
+.eye {
+  position: absolute;
+  width: 60px;
+  fill: none;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.eye__outer, .eye__inner, .eye__lashes-up, .eye__lashes-down, .eye__iris {
+  stroke: white;
+  fill: none;
+  stroke-width: 1.5px;
+}
+.eye__lashes-down {
+  opacity: 0;
+}
 @import url("https://fonts.cdnfonts.com/css/made-theartist-script");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Doto:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
@@ -1066,132 +1179,6 @@ ul {
   font-family: Roboto, sans-serif;
   font-weight: 300;
   font-size: 16px;
-}
-@import url("https://fonts.cdnfonts.com/css/made-theartist-script");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Doto:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-/* STYLES */
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-*:after, *:before {
-  box-sizing: border-box;
-}
-
-html, body {
-  overflow-x: hidden;
-}
-
-body {
-  background-color: cadetblue;
-  font-family: "Raleway", sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-img, video, canvas, svg {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-/*  COLOR--VARIABLES */
-/*  Predefined classes */
-.section {
-  padding: 1rem;
-  overflow: hidden;
-  min-height: 100vh;
-  padding-top: 5rem;
-}
-@media (min-width: 650px) {
-  .section {
-    padding: 5rem;
-  }
-}
-
-.coolCircleEyeButton {
-  position: relative;
-  display: inline-block;
-  top: 1rem;
-}
-.coolCircleEyeButton .textcircle {
-  display: block;
-  width: 250px;
-  animation: rottate 8s linear infinite;
-}
-.coolCircleEyeButton .textcircle text {
-  font-size: 32px;
-  text-transform: uppercase;
-  fill: white;
-}
-@keyframes rottate {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-.coolCircleEyeButton:hover text {
-  font-weight: 500;
-}
-.coolCircleEyeButton:hover .eye__inner,
-.coolCircleEyeButton:hover .eye__lashes-up,
-.coolCircleEyeButton:hover .eye__iris {
-  animation: hide 2s step-end infinite;
-}
-@keyframes hide {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-}
-.coolCircleEyeButton:hover .eye__lashes-down {
-  animation: show 2s step-end infinite;
-}
-@keyframes show {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 0;
-  }
-}
-
-.eye {
-  position: absolute;
-  width: 60px;
-  fill: none;
-  height: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.eye__outer, .eye__inner, .eye__lashes-up, .eye__lashes-down, .eye__iris {
-  stroke: white;
-  fill: none;
-  stroke-width: 1.5px;
-}
-.eye__lashes-down {
-  opacity: 0;
 }
 .splide__container {
   box-sizing: border-box;
