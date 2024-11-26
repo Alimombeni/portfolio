@@ -91,3 +91,33 @@ splide.mount();
 
 
 
+
+//
+// const tl = gsap.timeline()
+// tl.to("#theText", {
+//     rotate: 360, transformOrigin: "50% 50%", repeat: 1000, duration: 10, ease: "none"
+// })
+// GSDevTools.create({animation:tl})
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

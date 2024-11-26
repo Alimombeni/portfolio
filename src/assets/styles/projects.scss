@@ -7,6 +7,7 @@
     padding-bottom: 10px;
   }
 }
+//PROJECT
 .project{
   &__header {
     display: grid;
@@ -34,15 +35,15 @@
   &__img{
     position: relative;
     width: 100%;
-    img{
+    &--inner{
       max-width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 15px;
+      border-radius: 10px;
     box-shadow: 0 8px 32px 0 $box-shadow-blue2;
     position: absolute;
     right: 10vw;
-    top: 3rem;
+    top: 5rem;
     }
     //@media screen and (min-width: 600px) {
     //  img {
@@ -53,17 +54,76 @@
   }
 
   &__links{
-    padding-top: 3rem;
+    padding-top: 0.5rem;
+
     button{
     &:before{
+
       background: $dark-blue;
     }
       &:after{
         display: none;
       }
-
     }
-
-
+  }
+//PROJECTS TAGS
+  &__tags{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
+
+
+
+.coolFunnyLink {
+  position: relative;
+  font-family: sans-serif;
+  svg{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    stroke-width: 1px;
+    width: 95px;
+    path{
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      transition:stroke-dashoffset 0.6s cubic-bezier(0.7,0,0.3,1);
+    }
+  }
+  &:hover {
+    svg path{
+stroke-dashoffset:0 ;
+      transition-timing-function: cubic-bezier(0.8,1,0.7,1);
+
+    }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

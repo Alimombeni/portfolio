@@ -1,0 +1,93 @@
+@import "base";
+
+.coolCircleEyeButton{
+  position: relative;
+  display: inline-block;
+  top: 1rem;
+  .textcircle{
+    display: block;
+    width: 250px;
+    animation: rottate 8s linear infinite;
+    text{
+      font-size: 32px;
+      text-transform: uppercase;
+      fill: white;
+
+    }
+  }
+  @keyframes rottate {
+    to{
+      transform: rotate(-360deg);
+    }
+  }&:hover{
+      text{
+        font-weight: 500;
+
+      }
+       .eye__inner,
+       .eye__lashes-up,
+       .eye__iris {
+         animation: hide 2s step-end infinite;
+         @keyframes hide {
+           0%{
+             opacity: 0;
+           }
+           10%{
+             opacity: 1;
+           }
+         }
+       }
+  .eye__lashes-down{
+    animation: show 2s step-end infinite;
+    @keyframes show {
+      0%{
+        opacity: 1;
+      }
+      10%{
+        opacity: 0;
+      }
+    }
+
+  }
+     }
+}
+
+.eye{
+  position: absolute;
+  width: 60px;
+  fill: none;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__outer,
+  &__inner,
+  &__lashes-up,
+  &__lashes-down,
+  &__iris{
+    stroke: white;
+    fill: none;
+    stroke-width: 1.5px;
+  }
+  &__lashes-down{
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8763,6 +8763,15 @@ var splide = new _splide.default('.splide', {
   perMove: 3
 });
 splide.mount();
+
+//
+// const tl = gsap.timeline()
+// tl.to("#theText", {
+//     rotate: 360, transformOrigin: "50% 50%", repeat: 1000, duration: 10, ease: "none"
+// })
+// GSDevTools.create({animation:tl})
+//
+//
 },{"gsap":"../node_modules/gsap/index.js","./data":"assets/js/data.js","@splidejs/splide":"../node_modules/@splidejs/splide/dist/js/splide.esm.js"}],"C:/Users/alimo/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -8788,7 +8797,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4071" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "6712" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
