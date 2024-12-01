@@ -812,13 +812,23 @@ ul {
   }
 }
 
+.projects {
+  background: linear-gradient(to right, #313131, #24292e, #232323);
+}
 .projects__header {
   font-size: 50px;
   font-style: italic;
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
 
+.project {
+  padding-bottom: 12rem;
+}
 .project__header {
+  background: #CFBC0D;
+  background: linear-gradient(to top left, #CFBC0D 17%, #6FCFC9 69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
@@ -853,7 +863,7 @@ ul {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.67);
   position: absolute;
   right: 10vw;
-  top: 5rem;
+  top: 1rem;
 }
 .project__links {
   padding-top: 0.5rem;
@@ -868,19 +878,26 @@ ul {
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .coolFunnyLink {
   position: relative;
   font-family: sans-serif;
 }
+.coolFunnyLink p {
+  width: 50%;
+}
+.coolFunnyLink span {
+  color: #CC8B79;
+  font-weight: bold;
+}
 .coolFunnyLink svg {
   position: absolute;
-  bottom: -5px;
+  bottom: -15px;
   left: 0;
   stroke-width: 1px;
-  width: 95px;
+  width: 5%;
 }
 .coolFunnyLink svg path {
   stroke-dasharray: 1;

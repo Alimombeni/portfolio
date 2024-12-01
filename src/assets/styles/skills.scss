@@ -35,22 +35,6 @@
 
   }
 
-    //&--right{
-    //  right: 0;
-    //  top: 7rem;
-    //  animation: moveRight 20s linear infinite;
-    //  @keyframes moveRight {
-    //    0%{
-    //      transform: translate3d(0,0,0);
-    //    }
-    //    100%{
-    //      transform: translate3d(50%,0,0);
-    //    }
-    //  }
-    //}
-
-
-
     }
   @media (max-width: 700px) {
     &{
@@ -60,9 +44,7 @@
        &--left{
          top: 0.5rem;
        }
-       //&--right{
-       //   top: 8rem;
-       // }
+
      }
   }
   }
