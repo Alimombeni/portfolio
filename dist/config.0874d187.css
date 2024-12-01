@@ -932,6 +932,9 @@ ul {
     transform: translate(0);
   }
   .project__tags {
+    flex-direction: row;
+    top: 0;
+    left: 0;
     gap: 6px;
     font-size: 14px;
   }
@@ -1003,6 +1006,15 @@ ul {
 }
 .eye__lashes-down {
   opacity: 0;
+}
+.eye__header-title {
+  font-weight: 400;
+  font-size: 17px;
+  color: #666;
+}
+.eye__header-subtitle {
+  font-size: 27px;
+  font-weight: 700;
 }
 @import url("https://fonts.cdnfonts.com/css/made-theartist-script");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -1179,6 +1191,69 @@ ul {
   font-family: Roboto, sans-serif;
   font-weight: 300;
   font-size: 16px;
+}
+.faq {
+  position: relative;
+  color: #0f0f0f;
+  background: linear-gradient(to right, #f3e5ce, #f4deb7, #f3e4ce);
+}
+.faq__wrap {
+  padding: 3rem 4.5%;
+}
+.faq .question {
+  position: relative;
+  border-bottom: 1px solid #0f0f0f;
+  padding: 24px 0 24px 0;
+}
+.faq .question h3 {
+  cursor: pointer;
+  font-size: 27px;
+  color: #0f0f0f;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .faq .question h3 {
+    font-size: 22px;
+  }
+}
+.faq .question__wrap {
+  display: grid;
+  grid-template-columns: 26px auto;
+  align-items: center;
+  gap: 1rem;
+}
+.faq .question__answer {
+  font-family: Roboto;
+  font-size: 20px;
+  margin: 20px 0;
+  max-width: 40em;
+  color: #0f0f0f;
+  padding-left: 40px;
+  transition: all 0.2s ease-in-out;
+  display: none;
+}
+.faq .question__status {
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: 3px solid #0f0f0f;
+  border-radius: 50%;
+  margin-top: 2px;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 700px) {
+  .faq .question__status {
+    width: 25px;
+    height: 25px;
+  }
+}
+.faq .question.open .question__answer {
+  display: block;
+}
+.faq .question.open .question__status {
+  background: #0f0f0f;
+  outline: 1px solid #0f0f0f;
+  outline-offset: 2px;
 }
 .splide__container {
   box-sizing: border-box;
