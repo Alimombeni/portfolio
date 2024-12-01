@@ -1194,11 +1194,13 @@ ul {
 }
 .faq {
   position: relative;
-  color: #0f0f0f;
-  background: linear-gradient(to right, #f3e5ce, #f4deb7, #f3e4ce);
+  color: #c4c4c4;
+  border-radius: 5px;
+  background: linear-gradient(to right, #313131, #24292e, #232323);
 }
 .faq__wrap {
   padding: 3rem 4.5%;
+  opacity: 0.8;
 }
 .faq .question {
   position: relative;
@@ -1206,9 +1208,9 @@ ul {
   padding: 24px 0 24px 0;
 }
 .faq .question h3 {
+  color: #c4c4c4;
   cursor: pointer;
   font-size: 27px;
-  color: #0f0f0f;
   font-weight: 600;
 }
 @media (max-width: 700px) {
@@ -1227,7 +1229,7 @@ ul {
   font-size: 20px;
   margin: 20px 0;
   max-width: 40em;
-  color: #0f0f0f;
+  color: #c4c4c4;
   padding-left: 40px;
   transition: all 0.2s ease-in-out;
   display: none;
@@ -1236,7 +1238,7 @@ ul {
   width: 26px;
   height: 26px;
   background: transparent;
-  border: 3px solid #0f0f0f;
+  border: 3px solid #d5d5d5;
   border-radius: 50%;
   margin-top: 2px;
   transition: all 0.2s ease-in-out;
@@ -1251,8 +1253,8 @@ ul {
   display: block;
 }
 .faq .question.open .question__status {
-  background: #0f0f0f;
-  outline: 1px solid #0f0f0f;
+  background: #c4c4c4;
+  outline: 1px solid #c4c4c4;
   outline-offset: 2px;
 }
 .splide__container {

@@ -59,11 +59,6 @@ let reviews = [
         review: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi consectetur deleniti dolore eum hic laudantium nulla rem ',
 
     }
-
-
 ];
-
-
-
 
 export { reviews };

@@ -5535,7 +5535,7 @@ var image = {
   avatar8: _avatar8.default
 };
 var _default = exports.default = image;
-},{"../images/avatar1.jpg":"assets/images/avatar1.jpg","../images/avatar2.jpg":"assets/images/avatar2.jpg","../images/avatar3.jpg":"assets/images/avatar3.jpg","../images/avatar4.jpg":"assets/images/avatar4.jpg","../images/avatar5.jpg":"assets/images/avatar5.jpg","../images/avatar6.jpg":"assets/images/avatar6.jpg","../images/avatar7.jpg":"assets/images/avatar7.jpg","../images/avatar8.jpg":"assets/images/avatar8.jpg"}],"assets/js/data.js":[function(require,module,exports) {
+},{"../images/avatar1.jpg":"assets/images/avatar1.jpg","../images/avatar2.jpg":"assets/images/avatar2.jpg","../images/avatar3.jpg":"assets/images/avatar3.jpg","../images/avatar4.jpg":"assets/images/avatar4.jpg","../images/avatar5.jpg":"assets/images/avatar5.jpg","../images/avatar6.jpg":"assets/images/avatar6.jpg","../images/avatar7.jpg":"assets/images/avatar7.jpg","../images/avatar8.jpg":"assets/images/avatar8.jpg"}],"assets/js/reviewData.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5585,7 +5585,27 @@ var reviews = exports.reviews = [{
   imgs: _img.default.avatar8,
   review: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi consectetur deleniti dolore eum hic laudantium nulla rem '
 }];
-},{"./img":"assets/js/img.js"}],"../node_modules/@splidejs/splide/dist/js/splide.esm.js":[function(require,module,exports) {
+},{"./img":"assets/js/img.js"}],"assets/js/faqData.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.faqdata = void 0;
+var faqdata = exports.faqdata = [{
+  question: 'How longe does it take to build a website?',
+  answers: '\n' + 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magnam modi nemo quam sint vero.'
+}, {
+  question: 'How do you develop my website?',
+  answers: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim eveniet excepturi fugit id molestias provident quia similique.'
+}, {
+  question: 'How much time you need to do that?',
+  answers: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam aspernatur dolore, eaque facilis iste mollitia nemo officiis quis quo repudiandae tenetur unde vel vitae!'
+}, {
+  question: 'How many user can visited my web site?',
+  answers: '\n' + '\n' + 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id illum maxime, natus nemo obcaecati omnis pariatur porro tempora tenetur vel velit, voluptatum. Accusantium, aut beatae hic in maxime odio voluptatem.\n' + '\n'
+}];
+},{}],"../node_modules/@splidejs/splide/dist/js/splide.esm.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8700,9 +8720,16 @@ var SplideRenderer = exports.SplideRenderer = /*#__PURE__*/function () {
 "use strict";
 
 var _gsap = require("gsap");
-var _data = require("./data");
+var _reviewData = require("./reviewData");
+var _faqData = require("./faqData");
 var _splide = _interopRequireDefault(require("@splidejs/splide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 // ---------------------------------------------
 var barEl = document.querySelector('.loading__bar--inner');
 var numberEl = document.querySelector('.loading__counter--number');
@@ -8750,13 +8777,7 @@ var barInterval = setInterval(function () {
     });
   }
 }, 20);
-
-// reviews cards
-var splide_container = document.querySelector('.splide__list');
-_data.reviews.map(function (review) {
-  var template = "<div class=\"splide__slide\">\n            <div class=\"review\">\n                <i class=\"uil uil-comment review__icon\"></i>\n                <div class=\"review__card\">\n                <div class=\"review__topborder\"></div>\n                <div class=\"review__text\">\n                    <span>".concat(review.review.substring(0, 1), "</span>\n                    ").concat(review.review.substring(1, review.review.length), "\n                 </div>\n                <img src=").concat(review.imgs, " alt=\"\" class=\"review__img\">\n            <div class=\"review__profile\">\n                 <span>").concat(review.name, "</span>\n                 <span>").concat(review.position, "</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n                ");
-  splide_container.innerHTML += template;
-});
+// slider section
 var splide = new _splide.default('.splide', {
   type: 'loop',
   perPage: 3,
@@ -8764,15 +8785,34 @@ var splide = new _splide.default('.splide', {
 });
 splide.mount();
 
-//
-// const tl = gsap.timeline()
-// tl.to("#theText", {
-//     rotate: 360, transformOrigin: "50% 50%", repeat: 1000, duration: 10, ease: "none"
-// })
-// GSDevTools.create({animation:tl})
-//
-//
-},{"gsap":"../node_modules/gsap/index.js","./data":"assets/js/data.js","@splidejs/splide":"../node_modules/@splidejs/splide/dist/js/splide.esm.js"}],"C:/Users/alimo/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// reviews cards
+var splide_container = document.querySelector('.splide__list');
+_reviewData.reviews.map(function (review) {
+  var template = "<div class=\"splide__slide\">\n            <div class=\"review\">\n                <i class=\"uil uil-comment review__icon\"></i>\n                <div class=\"review__card\">\n                <div class=\"review__topborder\"></div>\n                <div class=\"review__text\">\n                    <span>".concat(review.review.substring(0, 1), "</span>\n                    ").concat(review.review.substring(1, review.review.length), "\n                 </div>\n                <img src=").concat(review.imgs, " alt=\"\" class=\"review__img\">\n            <div class=\"review__profile\">\n                 <span>").concat(review.name, "</span>\n                 <span>").concat(review.position, "</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n                ");
+  splide_container.innerHTML += template;
+});
+
+// FAQ section
+var wraper = document.querySelector('.faq__wrap');
+_faqData.faqdata.map(function (faq) {
+  var faqTemplate = "\n    <div class=\"question\">\n        <div class=\"question__wrap\">\n            <div class=\"question__status\"></div>\n            <h3>".concat(faq.question, "</h3>\n        </div>\n        <div class=\"question__answer\">\n            <p>").concat(faq.answers, "</p>\n        </div>\n    </div>\n    ");
+  wraper.innerHTML += faqTemplate;
+});
+
+// انتخاب تمام سوالات پس از ایجاد عناصر HTML
+var questions = _toConsumableArray(document.querySelectorAll('.question'));
+questions.forEach(function (question) {
+  var qText = question.querySelector('h3');
+  qText.addEventListener('click', function () {
+    questions.forEach(function (q) {
+      if (q !== question) {
+        q.classList.remove('open');
+      }
+    });
+    question.classList.toggle('open');
+  });
+});
+},{"gsap":"../node_modules/gsap/index.js","./reviewData":"assets/js/reviewData.js","./faqData":"assets/js/faqData.js","@splidejs/splide":"../node_modules/@splidejs/splide/dist/js/splide.esm.js"}],"C:/Users/alimo/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

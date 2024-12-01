@@ -1,6 +1,8 @@
 import { gsap } from "gsap";
-import { reviews } from './data';
+import { reviews } from './reviewData';
+import { faqdata }  from './faqData';
 import Splide from "@splidejs/splide";
+
 
 // ---------------------------------------------
 const barEl = document.querySelector('.loading__bar--inner');
@@ -54,7 +56,13 @@ let barInterval = setInterval(() => {
 
     }
 }, 20);
-
+// slider section
+var splide = new Splide( '.splide', {
+    type   : 'loop',
+    perPage: 3,
+    perMove: 3,
+});
+splide.mount();
 
 // reviews cards
 const splide_container = document.querySelector('.splide__list');
@@ -81,25 +89,36 @@ reviews.map((review)=>{
 });
 
 
-var splide = new Splide( '.splide', {
-    type   : 'loop',
-    perPage: 3,
-    perMove: 3,
+// FAQ section
+const wraper = document.querySelector('.faq__wrap');
+faqdata.map((faq) => {
+    const faqTemplate = `
+    <div class="question">
+        <div class="question__wrap">
+            <div class="question__status"></div>
+            <h3>${faq.question}</h3>
+        </div>
+        <div class="question__answer">
+            <p>${faq.answers}</p>
+        </div>
+    </div>
+    `;
+    wraper.innerHTML += faqTemplate;
 });
 
-splide.mount();
-
-
-
-
-//
-// const tl = gsap.timeline()
-// tl.to("#theText", {
-//     rotate: 360, transformOrigin: "50% 50%", repeat: 1000, duration: 10, ease: "none"
-// })
-// GSDevTools.create({animation:tl})
-//
-//
+// انتخاب تمام سوالات پس از ایجاد عناصر HTML
+const questions = [...document.querySelectorAll('.question')];
+questions.forEach((question) => {
+    const qText = question.querySelector('h3');
+    qText.addEventListener('click', () => {
+        questions.forEach((q) => {
+            if (q !== question) {
+                q.classList.remove('open');
+            }
+        });
+        question.classList.toggle('open');
+    });
+});
 
 
 
