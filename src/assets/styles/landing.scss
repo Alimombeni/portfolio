@@ -157,10 +157,12 @@
   & h1{
     width: 50%;
     padding-left: 2rem;
-    padding-top: 1rem;
+    padding-top: 6rem;
     font-family: 'MADE TheArtist Script', sans-serif;
-    font-weight: 500;
-    font-size: 50px;
+    background: #ADA996;
+    background: linear-gradient(to top left, #ADA996 17%, #EAEAEA 69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
   }
   @media (min-width: 600px) {
