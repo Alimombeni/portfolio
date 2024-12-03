@@ -58,107 +58,6 @@ ul {
     padding: 5rem;
   }
 }
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  border-radius: 2px;
-}
-.form__flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.form__info {
-  padding: 10px 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 1px solid #6FCFC9;
-}
-.form__info label {
-  color: #DBDBDB;
-  font-size: 20px;
-}
-.form__info textarea {
-  width: 100%;
-  resize: none;
-  height: 100px;
-  background: transparent;
-  color: #DBDBDB;
-}
-.form__info textarea:focus {
-  outline: none;
-}
-.form__info input {
-  background: transparent;
-  border-style: none;
-  padding: 0 20px;
-  color: #DBDBDB;
-}
-.form__info input:focus {
-  outline: none;
-}
-
-.contact {
-  background-image: url("/pattern.59c82831.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 0.5rem;
-  margin-top: 10px;
-}
-.contact__form {
-  margin-top: 1rem;
-}
-.contact .sections__header-title {
-  background: #CFBC0D;
-  background: linear-gradient(to top left, #CFBC0D 17%, #6FCFC9 69%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  font-size: 3rem;
-  letter-spacing: 5px;
-}
-.contact .sections__header-subtitle {
-  font-size: 2rem;
-  color: #DBDBDB;
-}
-
-.collButton {
-  margin-top: 20px;
-}
-.collButton span {
-  background: #CFBC0D;
-  background: linear-gradient(to top left, #CFBC0D 17%, #6FCFC9 69%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  font-size: 28px;
-  margin-right: 5px;
-}
-.collButton span i {
-  margin-left: 5px;
-  font-size: 18px;
-}
-.collButton:before {
-  background: #020c1a;
-}
-.collButton:after {
-  display: none;
-}
-.collButton:hover:before {
-  background: #111111;
-}
 @import url("https://fonts.cdnfonts.com/css/made-theartist-script");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Doto:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
@@ -814,6 +713,176 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
+}
+.contact {
+  position: relative;
+  background: linear-gradient(to right, #f3e5ce, #f4deb7, #f3e4ce);
+  font-family: sans-serif;
+  padding: 1rem;
+}
+.contact__header {
+  margin-bottom: 3rem;
+}
+@media (max-width: 1100px) {
+  .contact {
+    padding: 2rem;
+  }
+}
+.contact__profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  color: black;
+}
+.contact__profile-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.contact__profile-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.contact__profile-col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 17px;
+  z-index: 1;
+}
+.contact__profile-bg {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  background: #f6d5a4;
+  left: 20%;
+}
+.contact__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+.contact__socials {
+  font-size: 25px;
+}
+.contact__footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.contact__footer-link {
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+@media (max-width: 900px) {
+  .contact__footer-link {
+    font-size: 14px;
+  }
+}
+
+.form {
+  padding: 2rem;
+  color: black;
+}
+.form__info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.2vw;
+  font-weight: bold;
+}
+.form__info input {
+  font-size: inherit;
+  font-weight: inherit;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+  color: #444;
+}
+.form__info input:focus {
+  outline: none;
+}
+.form__flex {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.form__flex textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 2.2vw;
+  color: #444;
+  resize: none;
+}
+.form__flex textarea:focus {
+  outline: none;
+}
+.form__flex .collButton {
+  font-weight: 900;
+  font-size: 20px;
+}
+.form__flex .collButton span i {
+  margin-left: 10px;
+}
+.form__flex .collButton:before {
+  background: #000;
+}
+.form__flex .collButton:after {
+  display: none;
+}
+.form__flex .collButton:hover:before {
+  background: #c4c4c4;
+}
+
+@media (max-width: 900px) {
+  .form__flex {
+    flex-direction: column;
+  }
+  .form__flex textarea {
+    font-size: 4vw;
+  }
+  .form__info {
+    font-size: 4vw;
+  }
+  .form__info input {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 800px) {
+  .contact .collButton {
+    transform: scale3d(1, 1, 1);
+    font-size: 19px;
+  }
+}
+@media (max-width: 610px) {
+  .form__info {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 5vw;
+    width: 100%;
+  }
+  .form__info input {
+    font-size: inherit;
+    width: 100%;
+  }
+  .form__flex textarea {
+    width: 100%;
+    font-size: 5vw;
+  }
 }
 @import url("https://fonts.cdnfonts.com/css/made-theartist-script");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
