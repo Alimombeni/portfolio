@@ -157,31 +157,45 @@
     </div>
 
 <div class="contact__form">
-    <form action="#" class="form">
+    <form
+            action="https://formsubmit.co/mrcolor098@gmail.com"
+          method="POST"
+          class="form">
     <div class="form__flex">
     <div class="form__info">
-        <label>Email</label>
-        <input type="email" placeholder="your email...">
+        <label>my name</label>
+        <input type="text"
+               placeholder="your name..."
+               name="full name"
+               required />
     </div>
         <div class="form__info">
-            <label>Address</label>
-            <input type="text" placeholder="your address...">
+            <label>im looking for</label>
+            <input type="text"
+                   placeholder="type of service..."
+                   name="service"
+                    required
+            />
         </div>
 
     </div>
         <div class="form__flex">
             <div class="form__info">
-                <label>Phone</label>
-                <input type="number" placeholder="your number...">
+                <label>get in touch</label>
+                <input type="email"
+                       name="email"
+                       placeholder="your email..."
+                       required
+                      />
             </div>
         </div>
         <div class="form__flex">
             <div class="form__info">
-                <textarea placeholder="your message..."></textarea>
+                <textarea placeholder="your message..." name="message" required></textarea>
             </div>
         </div>
         <div class="form__flex">
-        <button class="collButton"><span>Send<i class="fa-regular fa-message"></i></span></button>
+        <button type="submit" class="collButton"><span>Send<i class="fa-regular fa-message"></i></span></button>
         </div>
 
     </form>
