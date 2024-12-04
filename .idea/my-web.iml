@@ -175,6 +175,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.cache/fd" />
       <excludeFolder url="file://$MODULE_DIR$/.cache/fe" />
       <excludeFolder url="file://$MODULE_DIR$/.cache/ff" />
+      <excludeFolder url="file://$MODULE_DIR$/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

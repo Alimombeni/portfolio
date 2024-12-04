@@ -6,9 +6,15 @@ import avatar5 from '../images/avatar5.jpg';
 import avatar6 from '../images/avatar6.jpg';
 import avatar7 from '../images/avatar7.jpg';
 import avatar8 from '../images/avatar8.jpg';
+import bg3 from '../images/eyeball.png';
+import bg1 from '../images/bg.jpg';
+import bg2 from '../shapes/pattern.png';
 
 
 const image = {
+    bg1,
+    bg2,
+    bg3,
     avatar1,
     avatar2,
     avatar3,
