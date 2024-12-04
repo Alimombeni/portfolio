@@ -68,12 +68,13 @@ position: relative;
   position: relative;
   display: flex;
   font-size: 16px;
-  padding: 20px 0;
+  padding: 15px 0;
   &__card{
     position: relative;
     width: 100%;
     padding: 2rem 0;
     display: flex;
+
     @media (min-width:650px ) {
       &{
         font-size: 18px;
@@ -111,9 +112,9 @@ position: relative;
      }
   &__profile {
    position: absolute;
-    left: 5rem;
+
     color: #bdbdbd;
-    bottom: -1.5rem;
+    bottom: -1rem;
     display: flex;
     flex-direction: column;
     font-family: Roboto , sans-serif;
@@ -122,6 +123,15 @@ position: relative;
   }
 }
 
+
+.section{
+  padding: 1rem;
+  overflow: hidden;
+  min-height: 50vh;
+  @media (min-width:650px ) {
+    padding: 10rem;
+  }
+}
 
 
 
