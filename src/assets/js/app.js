@@ -5,8 +5,16 @@ import { faqdata }  from './faqData';
 import projectData from "./projectData";
 import imagesLoaded from 'imagesloaded';
 
+import Scrollbar from 'smooth-scrollbar';
+// smooth scroll section
+let options = {
+    damping:0.2,
+    thumbMinSize:20,
+    alwaysShowTracks:true,
+    continuousScrolling:true,
 
-
+}
+Scrollbar.init(document.querySelector('body'));
 
 // ---------------------------------------------
 const barEl = document.querySelector('.loading__bar--inner');
@@ -20,14 +28,14 @@ let barInterval = setInterval(() => {
     if (c === 101) {
         numberEl.style.color = '#6cff8d';
 
-        setTimeout(()=>{
-        objectEl.style.display = 'block';
-        gsap.to('.loading__object' , {
-            duration:100,
-            rotation : '360deg',
-            ease:'expo',
-        })
-        },100)
+        setTimeout(() => {
+            objectEl.style.display = 'block';
+            gsap.to('.loading__object', {
+                duration: 100,
+                rotation: '360deg',
+                ease: 'expo',
+            })
+        }, 100)
         clearInterval(barInterval)
         gsap.to('.loading__bar', {
             duration: 0.3,
@@ -45,40 +53,43 @@ let barInterval = setInterval(() => {
             borderColor: '#727272',
         });
         gsap.to('.loading__box', {
-            delay:2,
-            border:'none',
+            delay: 2,
+            border: 'none',
         });
-    }
-        imagesLoaded(document.querySelectorAll('img') , ()=>{
-            gsap.to('.loading' , {
-                duration:2,
-                delay : 2,
-                zIndex:1,
-                background:'transparent',
-                opacity:0.5,
 
-            });
-            gsap.to('.header' , {
-                duration:1,
-                delay:2,
-                top:0,
-            });
-            gsap.to('.socials' , {
-                duration:1,
-                delay:2.5,
-                bottom:"10rem",
-            });
-            gsap.to('.scrollDown' , {
-                duration:1,
-                delay:3,
-                bottom:"3rem",
-            });
+    imagesLoaded(document.querySelectorAll('img'), () => {
+        gsap.to('.loading', {
+            duration: 2,
+            delay: 2,
+            zIndex: 1,
+            background: 'transparent',
+            opacity: 0.5,
 
-        })
+        });
+        gsap.to('.header', {
+            duration: 1,
+            delay: 2,
+            top: 0,
+        });
+        gsap.to('.socials', {
+            duration: 1,
+            delay: 2.5,
+            bottom: "10rem",
+        });
+        gsap.to('.scrollDown', {
+            duration: 1,
+            delay: 3,
+            bottom: "3rem",
+        });
 
 
 
 
+
+
+    });
+
+}
 
 }, 5);
 
