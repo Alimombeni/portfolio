@@ -2,24 +2,20 @@
 
 .projects {
   background: #ADA996;
-  background: linear-gradient(to top left, #ADA996 17%, #EAEAEA 69%);
-  //background: linear-gradient(to right , #e7e6e6, #cecece, #ffffff);
-
+  background: linear-gradient(to top left, #EAEAEA  17%, #ADA996 69%);
 & h1{
-  color: #EAEAEA;
+  color: #3f3f3f;
 }
   &__header{
     font-size: 50px;
     font-style: italic;
-   padding-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 }
 //PROJECT
 .project{
-
-  padding-bottom: 12rem;
+  padding-bottom: 2rem;
   &__header {
-
     background: #CFBC0D;
     background: linear-gradient(to top left, #CFBC0D 17%, #6FCFC9 69%);
     -webkit-background-clip: text;
@@ -28,21 +24,21 @@
     grid-template-columns: 1fr 3fr;
     gap: 1rem;
     font-family: sans-serif;
-
+    font-weight: bold;
+    margin-top: 4rem;
     & span {
       border-top: 1px solid $white-color;
       padding: 1rem;
-      font-size: 25px;
+      font-size: 35px;
       text-align: center;
     }
-
   }
   &__infos{
     margin-top: 1rem;
     &--name {
       position: relative;
       font-size: 2rem;
-      font-weight: 200;
+      font-weight: bold;
       font-family: sans-serif;
       display: flex;
       align-items: center;
@@ -50,26 +46,22 @@
   }
   &__img{
     position: relative;
-
     width: 100%;
     &--inner{
-      z-index: 2;
       max-width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 3px;
     box-shadow: 0 8px 32px 0 $box-shadow-blue2;
     position: absolute;
     right: 10vw;
     top: 1rem;
     }
   }
-
   &__links{
     padding-top: 0.5rem;
-
     button{
-      z-index: 2;
+
     &:before{
       background: $dark-blue;
     }
@@ -95,9 +87,7 @@
       width: 50%;
     }
   span{
-
-    color: #CC8B79;
-
+    color: $darkish-blue;
     font-weight: bold;
   }
   svg{
@@ -122,67 +112,50 @@
   }
 
 
-//PROJECT -RESPONSIVE SECTION
-@media (max-width: 1350px) {
-  .projects {
-    padding: 3rem;
+//smart phone
+@media only screen
+and (min-width : 320px) {
+  /* Styles here */
+  .project{
+    padding-bottom: 24rem;
+    margin-bottom: 8rem;
   }
-  .project__img img{
-    width: 74vw;
-    right: 5rem;
-  }
-  .project__infos--name{
-    font-size: 38px;
+  .project__header{
+    font-size: 16px;
+    font-style: italic;
+    padding-top: 8rem;
 
   }
-  .project .coolCircleEyeButton{
-    transform: translate(-14rem , -3rem);
-  }
-}
-@media (max-width: 740px) {
-  .projects {
-    padding: 1rem;
-  }
-  .project__tags {
-    flex-direction: row;
 
-    top: 0;
-    left: 0;
-
-  }
-  .project__infos--name {
-    font-size: 35px;
-    span{
-      display: none;
-
-    }
-  }
-  .project__img img{
-    width: 85vw;
-    right: 3rem;
-  }
 }
 
-@media (max-width: 440px) {
-  .project .coolCircleEyeButton {
-    transform: translate(0);
+//tablet
+@media only screen
+and (min-width : 768px) {
+  /* Styles here */
+  .project{
+    padding-bottom: 2rem;
+
   }
-  .project__tags {
-    flex-direction: row;
-    top: 0;
-    left: 0;
-    gap: 6px;
-    font-size: 14px;
-    
+  .project__header{
+    font-size: 16px;
+    font-style: italic;
+    padding-top: 3rem;
   }
-  .project__header span{
-    font-size: 25px;
+
+}
+//laptop
+@media only screen
+and (min-width : 1200px) {
+  /* Styles here */
+  .project{
+
   }
 }
+
 
 //EYE SVG
 .coolCircleEyeButton{
-  z-index: 2;
   position: relative;
   display: inline-block;
   top: 1rem;
@@ -233,7 +206,6 @@
      }
    }
 }
-
 .eye {
   position: absolute;
   width: 60px;
@@ -276,6 +248,67 @@
 
 
 
+//PROJECT -RESPONSIVE SECTION
+//@media (max-width: 1350px) {
+//  .projects {
+//    padding: 3rem;
+//
+//  }
+//  .project__header{
+//    margin-top: 6rem;
+//  }
+//  .project__img img{
+//    width: 74vw;
+//    right: 5rem;
+//  }
+//  .project__infos--name{
+//    font-size: 38px;
+//
+//  }
+//  .project .coolCircleEyeButton{
+//    transform: translate(-14rem , -3rem);
+//  }
+//}
+//@media (max-width: 740px) {
+//  .projects {
+//    padding: 1rem;
+//  }
+//
+//  .project__tags {
+//    flex-direction: row;
+//    top: 0;
+//    left: 0;
+//  }
+//  .project__infos--name {
+//    font-size: 35px;
+//    color: #8c0707;
+//    span{
+//      display: none;
+//    }
+//  }
+//  .project__img img{
+//    width: 85vw;
+//    right: 3rem;
+//  }
+//}
+//@media (max-width: 440px) {
+//  .project .coolCircleEyeButton {
+//    transform: translate(0);
+//  }
+//  .project__img img {
+//    width: 20vw;
+//  }
+//  .project__tags {
+//    flex-direction: row;
+//    top: 0;
+//    left: 0;
+//    gap: 6px;
+//    font-size: 14px;
+//  }
+//  .project__header span{
+//    font-size: 25px;
+//  }
+//}
 
 
 

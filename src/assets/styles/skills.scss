@@ -1,6 +1,5 @@
 @import "base";
 .skills{
-  z-index: 2;
   user-select: none;
   position: relative;
   font-size: 40px;
@@ -11,19 +10,18 @@
   padding-top: 1rem;
   &__header{
     font-weight: 600;
-    font-family: Agdasima ;
+    font-family: Agdasima , sans-serif;
 
   }
   &__text{
     position: absolute;
     white-space: nowrap;
-    font-family: Agdasima ;
+    font-family: Agdasima,sans-serif;
   &--left{
     left: 0;
     top: 1rem;
     animation: moveLeft 30s linear infinite;
     @keyframes moveLeft {
-
     0%{
       transform: translate3d(0,0,0);
     }

@@ -4,8 +4,8 @@ import { reviews } from './reviewData';
 import { faqdata }  from './faqData';
 import projectData from "./projectData";
 import imagesLoaded from 'imagesloaded';
-
 import Scrollbar from 'smooth-scrollbar';
+
 // smooth scroll section
 let options = {
     damping:0.2,
@@ -14,7 +14,8 @@ let options = {
     continuousScrolling:true,
 
 }
-Scrollbar.init(document.querySelector('body'));
+
+
 
 // ---------------------------------------------
 const barEl = document.querySelector('.loading__bar--inner');
@@ -27,7 +28,6 @@ let barInterval = setInterval(() => {
     c++;
     if (c === 101) {
         numberEl.style.color = '#6cff8d';
-
         setTimeout(() => {
             objectEl.style.display = 'block';
             gsap.to('.loading__object', {
@@ -64,7 +64,6 @@ let barInterval = setInterval(() => {
             zIndex: 1,
             background: 'transparent',
             opacity: 0.5,
-
         });
         gsap.to('.header', {
             duration: 1,
@@ -81,19 +80,12 @@ let barInterval = setInterval(() => {
             delay: 3,
             bottom: "3rem",
         });
-
-
-
-
-
-
+        setTimeout(()=>{
+        Scrollbar.init(document.querySelector('body'));
+        },2000)
     });
-
 }
-
 }, 5);
-
-
 // reviews cards
 const splide_container = document.querySelector('.splide__list');
 reviews.map((review)=>{
@@ -136,7 +128,7 @@ faqdata.map((faq) => {
     wraper.innerHTML += faqTemplate;
 });
 
-// انتخاب تمام سوالات پس از ایجاد عناصر HTML
+//FAQ section
 const questions = [...document.querySelectorAll('.question')];
 questions.forEach((question) => {
     const qText = question.querySelector('h3');
@@ -166,7 +158,7 @@ projectData.map((project) =>{
                 ${project.name}<span>${project.level}</span></h1>
         </div>
         <div class="project__img">
-            <img class="project__img--inner" src="${project.img}" alt="project images">
+            <img  src="${project.img}" alt="project images">
             <div class="project__links">
                 <a href="${project.gitlink}" target="_blank">
                     <button class="collButton">
@@ -214,13 +206,10 @@ projectData.map((project) =>{
                     </svg>
                 </a>
 <!------------------------------>
-
-
  <div class="project__tags">  
        <!--  skills tags-->         
                 <a href="#" class="coolFunnyLink">
                     <span>${project.skill}</span>
-                    
                     <svg width="100%" height="9" viewBox="0 0 101 9">
                         <path
                                 d="M.426 1.973C4.144 1.567 17.77-.514 21.443 1.48 24.296 3.026 24.844 4.627 27.5 7c3.075 2.748 6.642-4.141 10.066-4.688 7.517-1.2 13.237 5.425 17.59 2.745C58.5 3 60.464-1.786 66 2c1.996 1.365 3.174 3.737 5.286 4.41 5.423 1.727 25.34-7.981 29.14-1.294"
