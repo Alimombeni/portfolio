@@ -3,7 +3,7 @@ import projectImg from "./projectImg";
 
 const projectData = [
     {
-        number:'1/4',
+        number:'1/5',
       time:'Fev 2020',
         level :'(Beginners)',
         name:'choice-picker',
@@ -19,13 +19,13 @@ const projectData = [
 
 
     {
-        number:'2/4',
+        number:'2/5',
         time:'Nov 2021',
-        level :'(Advanced)',
-        name:'House-rent',
+        level :'(Beginners)',
+        name:'Water-Remained',
         img: projectImg.png2,
-        gitlink:'https://github.com/Alimombeni/choice-picker',
-        vercellink:'https://choice-picker.vercel.app/',
+        gitlink:'https://github.com/Alimombeni/Water-Remained',
+        vercellink:'https://water-remained.vercel.app/',
         description:'\n' +
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam blanditiis consectetur, corporis dolores ipsa laborum repudiandae! Ab aliquid asperiores assumenda atque consequatur dicta error exercitationem expedita facere illum, ipsa laborum mollitia nam nisi non officiis provident quasi quibusdam repellat reprehenderit sint temporibus tenetur velit? Eum facilis fugit optio rem.',
 
@@ -34,13 +34,13 @@ const projectData = [
     },
 
     {
-        number:'3/4',
+        number:'3/5',
         time:'Apr 2022',
-        level :'(Expert)',
-        name:'Instagram',
+        level :'(Beginners)',
+        name:'Counter',
         img: projectImg.png3,
-        gitlink:'https://github.com/Alimombeni/choice-picker',
-        vercellink:'https://choice-picker.vercel.app/',
+        gitlink:'https://github.com/Alimombeni/counter',
+        vercellink:'https://counter-bqwk.vercel.app/',
         description:'\n' +
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam blanditiis consectetur, corporis dolores ipsa laborum repudiandae! Ab aliquid asperiores assumenda atque consequatur dicta error exercitationem expedita facere illum, ipsa laborum mollitia nam nisi non officiis provident quasi quibusdam repellat reprehenderit sint temporibus tenetur velit? Eum facilis fugit optio rem.',
         skill: ['HTML','SASS','TYPESCRIPT','REACT','MONGODB','NODE.JS'],
@@ -48,13 +48,27 @@ const projectData = [
     },
 
     {
-        number:'4/4',
+        number:'4/5',
         time:'Sep 2023',
-        level :'(Advanced)',
-        name:'FaceBook',
+        level :'(Beginners)',
+        name:'Eat&Split',
         img: projectImg.png4,
-        gitlink:'https://github.com/Alimombeni/choice-picker',
-        vercellink:'https://choice-picker.vercel.app/',
+        gitlink:'https://github.com/Alimombeni/Eat-Split',
+        vercellink:'https://eat-split-nu.vercel.app/',
+        description:'\n' +
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam blanditiis consectetur, corporis dolores ipsa laborum repudiandae! Ab aliquid asperiores assumenda atque consequatur dicta error exercitationem expedita facere illum, ipsa laborum mollitia nam nisi non officiis provident quasi quibusdam repellat reprehenderit sint temporibus tenetur velit? Eum facilis fugit optio rem.',
+
+        skill: ['HTML','TAILWIND','REACT','GSAP','NEXT.JS'],
+
+    },
+    {
+        number:'5/5',
+        time:'Nov 2023',
+        level :'(Advanced)',
+        name:'House Market',
+        img: projectImg.png5,
+        gitlink:'https://github.com/Alimombeni/House-Market',
+        vercellink:'https://house-rent-one.vercel.app/',
         description:'\n' +
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam blanditiis consectetur, corporis dolores ipsa laborum repudiandae! Ab aliquid asperiores assumenda atque consequatur dicta error exercitationem expedita facere illum, ipsa laborum mollitia nam nisi non officiis provident quasi quibusdam repellat reprehenderit sint temporibus tenetur velit? Eum facilis fugit optio rem.',
 

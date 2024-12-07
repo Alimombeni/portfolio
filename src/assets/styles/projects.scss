@@ -3,6 +3,7 @@
 .projects {
   background: #ADA996;
   background: linear-gradient(to top left, #EAEAEA  17%, #ADA996 69%);
+
 & h1{
   color: #3f3f3f;
 }
@@ -42,9 +43,12 @@
       font-family: sans-serif;
       display: flex;
       align-items: center;
+      justify-content: space-around;
     }
   }
   &__img{
+    justify-content: right;
+
     position: relative;
     width: 100%;
     &--inner{
@@ -130,28 +134,18 @@ and (min-width : 320px) {
 }
 
 //tablet
-@media only screen
-and (min-width : 768px) {
-  /* Styles here */
-  .project{
-    padding-bottom: 2rem;
-
-  }
-  .project__header{
-    font-size: 16px;
-    font-style: italic;
-    padding-top: 3rem;
-  }
-
-}
-//laptop
-@media only screen
-and (min-width : 1200px) {
-  /* Styles here */
-  .project{
-
-  }
-}
+//@media only screen
+//and (min-width : 768px) {
+//  /* Styles here */
+//
+//
+//}
+////laptop
+//@media only screen
+//and (min-width : 1200px) {
+//  /* Styles here */
+//
+//}
 
 
 //EYE SVG
