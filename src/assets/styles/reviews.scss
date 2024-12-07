@@ -1,6 +1,7 @@
 @import "base";
 
 .reviews {
+  z-index: 2;
   background:$darkish-blue ;
   color: white;
 position: relative;

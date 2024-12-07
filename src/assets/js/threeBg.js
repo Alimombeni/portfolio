@@ -25,8 +25,8 @@ const geometry = new THREE.PlaneGeometry( 18, 10 ,15 ,9 );
 const material = new THREE.MeshBasicMaterial(
     {
         // color: 0xdd1818,
-    map:loader.load(image.bg3),
-        // wireframe:true,
+    // map:loader.load(image.bg3),
+        wireframe:true,
          });
 // combination geometry and material together --> in mesh
 const mesh = new THREE.Mesh(geometry , material);

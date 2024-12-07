@@ -11,7 +11,7 @@
   z-index: 99;
   background-color: $dark-blue;
   display: grid;
-  display: none;
+
   place-items: center;
   font-family: "Poppins", sans-serif;
 
@@ -121,6 +121,8 @@
     left: 50%;
     transform: translate(-50% , -50%);
      display: none;
+  z-index: -10;
+  user-select: none;
    }
 }
 

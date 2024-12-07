@@ -1,7 +1,8 @@
 .faq {
   position: relative;
   color: #c4c4c4;
-  border-radius: 5px;
+
+  z-index: 2;
   background: linear-gradient(to right , #313131, #24292e, #232323);
   &__wrap{
     padding: 3rem 4.5%;

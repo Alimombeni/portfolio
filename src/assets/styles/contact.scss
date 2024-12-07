@@ -1,8 +1,11 @@
  .contact {
+   background: #ADA996;
+   background: linear-gradient(to top left, #ADA996 17%, #EAEAEA 69%);
    position: relative;
-   background: linear-gradient(to right , #f3e5ce , #f4deb7 , #f3e4ce);
+   //background: linear-gradient(to right , #f3e5ce , #f4deb7 , #f3e4ce);
    font-family: sans-serif;
    padding: 1rem;
+   z-index: 2;
    &__header{
      margin-bottom: 3rem;
    }

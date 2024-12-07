@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { reviews } from './reviewData';
 import { faqdata }  from './faqData';
 import projectData from "./projectData";
-
+import imagesLoaded from 'imagesloaded';
 
 
 
@@ -42,24 +42,45 @@ let barInterval = setInterval(() => {
             duration: 1,
             height: '500px',
             borderRadius: '50%',
-            borderColor: '#6cff8d',
+            borderColor: '#727272',
         });
         gsap.to('.loading__box', {
             delay:2,
             border:'none',
-        })
-
-        gsap.to('.loading' , {
-            duration:2,
-            delay : 2,
-            zIndex:1,
-            background:'transparent',
-            opacity:0.5,
-
-        })
-
+        });
     }
-}, 20);
+        imagesLoaded(document.querySelectorAll('img') , ()=>{
+            gsap.to('.loading' , {
+                duration:2,
+                delay : 2,
+                zIndex:1,
+                background:'transparent',
+                opacity:0.5,
+
+            });
+            gsap.to('.header' , {
+                duration:1,
+                delay:2,
+                top:0,
+            });
+            gsap.to('.socials' , {
+                duration:1,
+                delay:2.5,
+                bottom:"10rem",
+            });
+            gsap.to('.scrollDown' , {
+                duration:1,
+                delay:3,
+                bottom:"3rem",
+            });
+
+        })
+
+
+
+
+
+}, 5);
 
 
 // reviews cards

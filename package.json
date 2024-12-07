@@ -21,6 +21,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "gsap": "^3.12.5",
+    "imagesloaded": "^5.0.0",
     "src": "^1.1.2",
     "swiper": "^11.1.14",
     "three": "^0.171.0"
@@ -28,5 +29,4 @@
   "resolutions": {
     "three": "^<desired-version>"
   }
-
 }
