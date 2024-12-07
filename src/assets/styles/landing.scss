@@ -73,9 +73,10 @@
   .scrollDown {
     position: absolute;
     bottom: 3rem;
-    z-index: 2;
+
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
     &__wheel{
       height: 42px;
       width: 24px;
@@ -181,3 +182,7 @@
   }
 }
 
+.landing canvas {
+  position: absolute;
+  z-index: 1;
+}

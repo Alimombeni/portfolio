@@ -1,10 +1,11 @@
+import THREE from "./threeexport";
 import image from "./img";
-import * as THREE from 'three';
+const loader = new THREE.TextureLoader();
+
 import vertex from '../shader/vertex.glsl';
 import fragment from '../shader/fragment.glsl';
-const loader = new THREE.TextureLoader();
-const texture1 = loader.load(image.avatar1);
-const texture2 = loader.load(image.avatar3);
+const texture1 = loader.load(image.bg3);
+const texture2 = loader.load(image.bg2);
 const texture3 = loader.load(image.avatar4);
 
 function lerp(start,end,t){
@@ -44,6 +45,9 @@ class shaded {
                         this.uniforms.uTexture.value = texture1;
                     break;
                 }
+                if (this.links.length === 0) {
+                    console.error('No elements found with the class .rgbhover');
+                }
             });
             link.addEventListener('mouseleave' , ()=>{
                 this.uniforms.uAlpha.value = lerp(this.uniforms.uAlpha.value ,0.0,0.1);
@@ -53,6 +57,7 @@ class shaded {
         this.setupCamera();
         this.followMouseMove();
         this.createMesh();
+        this.render();
 
     }
     get viewport(){
@@ -123,10 +128,26 @@ this.container.appendChild(this.renderer.domElement);
 
 
     }
+
+
+render(){
+        this.offset.x = lerp(this.offset.x , this.targetX ,0.1);
+        this.offset.y = lerp(this.offset.y , this.targetY ,0.1);
+
+        this.uniforms.uOffset.value.set((this.targetX - this.offset.x) * 0.0003, -(this.targetY - this.offset.y ) * 0.0003);
+
+        this.mesh.position.set(this.offset.x - window.innerWidth / 2 , - this.offset.y + window.innerHeight / 2);
+
+        this.hovered ? (this.uniforms.uAlpha.value=lerp(this.uniforms.uAlpha.value,1.0,0.1)):
+            (this.uniforms.uAlpha.value=lerp(this.uniforms.uAlpha.value,0.0,0.1))
+this.renderer.render(this.scene , this.camera);
+window.requestAnimationFrame(this.render.bind(this));
+
+
 }
 
 
+}
 
 
-
-
+new shaded();

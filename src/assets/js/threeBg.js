@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import THREE from "./threeexport";
 import image from "./img";
 const container = document.querySelector('.three_bg');
 // for loading texture in object

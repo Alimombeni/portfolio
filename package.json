@@ -24,5 +24,9 @@
     "src": "^1.1.2",
     "swiper": "^11.1.14",
     "three": "^0.171.0"
+  },
+  "resolutions": {
+    "three": "^<desired-version>"
   }
+
 }
